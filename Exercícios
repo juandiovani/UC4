@@ -1,0 +1,45 @@
+// 1 Crie uma função dobrar que receba um número e retorne ele dobrado //
+
+function dobrar(n: number): number{
+    return n * 2;
+}
+
+console.log(dobrar(25));
+
+// 2 Crie uma função saudacao que receba um nome (string) e retorne "Olá, <nome>" //
+
+
+function saudacao(nome: string): string{
+    return nome;
+}
+console.log(saudacao("Juan"));
+
+// 3 Defina um array de strings com nomes de amigos e percorra ele com forEach //
+
+let nomeDosAmigos: string[] = ["Andrey", "Murilo", "Diogo"];
+console.log(nomeDosAmigos);
+
+// 4 crie uma tupla que armazene [nome, idade] //
+ 
+let pessoa: [string, number] = ["Juan", 17];
+ console.log(pessoa);
+
+ // 5 Crie um enum para representar níveis de acesso: ADMIN, USER, GUEST //
+
+enum permissões { ADMIN, USER, GUEST }
+console.log(permissões); 
+
+// 6 Crie um objeto pessoa com propriedades tipadas (nome, idade, email) //
+
+let user: {id: number, nome: string} = {id: 1, nome: "Juan"}
+console.log(user)
+
+// 7 Escreva uma função que nunca retorna (never), lançando um erro //
+
+function erro(): never { throw new Error("..."); }
+console.log(erro)
+
+// 8 Configure um projeto com tsconfig.json que tenha src/ e dist/ //
+
+let nome: string = "Juan";
+console.log("Olá, " + nome);
