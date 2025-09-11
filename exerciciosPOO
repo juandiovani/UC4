@@ -1,0 +1,43 @@
+// 1 Crie uma classe Ninja com :nome, aldeia, jutsus (lista de strings).Um método usarJutsu() que imprime qual jutsu foi usado.Instancie pelo menos 2 ninjas diferentes e teste seus métodos.//
+class Ninja {
+    nome: string;
+    aldeia: string;
+    jutsus: string[];
+
+    constructor(nome: string, aldeia: string, jutsus: string[]) {
+        this.nome = nome;
+        this.aldeia = aldeia;
+        this.jutsus = jutsus;
+    }
+
+    Usarmetodo(){
+    console.log(`${this.nome} usou o jutsus ${this.jutsus} no ${this.aldeia}`)
+ }
+}
+
+const naruto = new Ninja( "Modo sabios do seis caminho","qj da maldade", ["Rasengan", "Multi Clones das sombras"]);
+const sasuke = new Ninja("Sasuke" ,"Aldeia da folha",["chidori","Sharingan"]);
+
+naruto.Usarmetodo()
+sasuke.Usarmetodo()
+
+
+// 2 Crie uma classe Héroi com:nome, universo (Marvel, DC, etc), poder.Um método lutar() que mostre o herói e o poder usado.Teste criando, por exemplo, o Batman e o Homem de Ferro.
+class Heroi {
+    name: string;
+    universo: string;
+    poder: string;
+
+    constructor(name: string, universo: string, poder: string){
+        this.name = name;
+        this.universo = universo;
+        this.poder = poder;
+    }
+
+    UmMetodoDeLuta(){
+        console.log(`${this.name} do ${this.universo} mostro que seu ${this.poder} deixam ele muito forte`)
+    }
+}
+
+const wolverine = new Heroi("Wolverire", "Marvel"," fator de cura e suas garras")
+wolverine.UmMetodoDeLuta()
