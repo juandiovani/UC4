@@ -1,0 +1,39 @@
+// 1 Crie uma classe Pessoa com:Atributo privado idade.Método público fazerAniversario() que aumenta a idade.Método público mostrarIdade() para exibir a idade.
+class Pessoa {
+    private idade: number;
+
+    constructor(idadeInicial: number){
+        this.idade = idadeInicial;
+  }
+  public fazerAniversario() {
+    this.idade += 1;
+  }
+
+  public mostrarIdade(): void {
+    console.log(`Sua idade é ${this.idade} anos`);
+  }
+} 
+
+const MinhaIdade = new Pessoa(18);
+MinhaIdade.fazerAniversario();
+MinhaIdade.mostrarIdade();
+
+// 2 Crie uma classe Celular com: Atributo privado nivelBateria. Métodos públicos carregar() e usar() (que diminuem a bateria).Método mostrarBateria() para exibir o nível atual.
+class Celular {
+  private nivel: number;
+
+  constructor(nivelBateria: number) {
+    this.nivel = nivelBateria;
+  }
+  public carregar(){
+    this.nivel += 10;
+  }
+  public usar() {
+    console.log(`Seu celular esta com ${this.nivel}`);
+  }
+
+}
+
+const NivelCelular = new Celular(30);
+NivelCelular.carregar();
+NivelCelular.usar();
