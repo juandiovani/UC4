@@ -1,0 +1,62 @@
+class Pessoa2 {
+    nome: string
+
+    constructor(nome: string) {
+        this.nome = nome;
+    }
+
+    Apresentar() {
+        console.log(`${this.nome} vai mostrar o seu projeto`)
+    }
+}
+
+class Professor extends Pessoa2 {
+    ensinar(){
+        console.log(`${this.nome} esta ensinando a materia`)
+    }
+}
+
+class Aluno extends Pessoa2 {
+    estudar(){
+        console.log(`${this.nome} esta aprendendo a materia que foi dada`)
+    }
+}
+
+const Daniel = new Professor("Professor Daniel");
+const Juan = new Aluno("JD");
+Daniel.ensinar();
+Juan.estudar();
+
+// 2 
+
+class Funcionario {
+    nome: string;
+    salario: number;
+
+    constructor(nome: string, salario: number) {
+        this.nome = nome;
+        this.salario = salario;
+    }
+
+    MostrarSalario() {
+        console.log(`Este o salário atual ${this.salario}`)
+    }
+}
+
+class Gerente extends Funcionario {
+    AumentarSalario(){
+        console.log(`${this.nome} vai aumentar seu salário`)
+    }
+}
+
+class Estagiario extends Funcionario {
+    receberAjustedeCusto(){
+        console.log(`O ${this.salario} do ${this.nome} aumentou bastante`)
+    }
+}
+
+const Patrão = new Gerente("Patrão", 2800);
+const Aprendiz = new Estagiario("Aprendiz", 3500);
+Patrão.AumentarSalario();
+Aprendiz.receberAjustedeCusto();
+
