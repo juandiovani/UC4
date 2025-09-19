@@ -1,0 +1,51 @@
+// Crie uma classe abstrata Animal com o método abstrato falar().Crie duas subclasses (Cachorro, Gato) que implementam esse método de forma diferente.
+abstract class Animal {
+    constructor(public nome: string) { }
+    abstract falar(): void;
+}
+
+class Doguinho extends Animal {
+    falar(): void {
+        console.log(`Au au au auuuuuuuuu`)
+    }
+
+}
+
+class Gatinho extends Animal {
+    falar(): void {
+        console.log(`Miau miau miau`)
+    }
+}
+
+const Kripto = new Doguinho("Kripto");
+const Tom = new Gatinho("Tom");
+Kripto.falar();
+Tom.falar();
+
+
+// Crie uma interface Veiculo com as propriedades marca e modelo, e o método acelerar().Implemente em pelo menos duas classes (Carro, Moto).
+interface Veiculo {
+    marca: string;
+    modelo: string;
+    MetodoAcelerar(): void;
+}
+
+class Lamborguine implements Veiculo {
+    MetodoAcelerar(): void {
+        console.log(`Essa nave é muito rapida slk`)
+    }
+    constructor(public marca: string, public modelo: string) { }
+
+}
+
+class Ferrari implements Veiculo {
+    MetodoAcelerar(): void {
+        console.log(`Slk mano, se liga nessa nave monstro`)
+    }
+    constructor(public marca: string, public modelo: string) {}
+}
+
+const LamborguineVeneno = new Lamborguine("Lamborguine", "Veneno ");
+const Ferrão = new Ferrari("Ferrari", "Ferrão");
+LamborguineVeneno.MetodoAcelerar();
+Ferrão.MetodoAcelerar(); 
