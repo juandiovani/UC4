@@ -1,0 +1,84 @@
+// Crie uma classe Animal com o método falar().Faça subclasses (Cachorro, Gato, Pássaro) que sobrescrevem o método de forma diferente.
+class Animal2  {
+    constructor(public nome: string) {}
+    falar(): void {
+        console.log(`${this.nome} falar normamalmente`)
+    }
+}
+
+class Cachorro extends Animal2 {
+    falar(): void {
+        console.log(`${this.nome} au au au au`)
+    }
+}
+
+class Gato2 extends Animal2 {
+    falar(): void {
+        console.log(`${this.nome} tenho 8 vidas `)
+    }
+}
+
+class Passaro extends Animal2 {
+    falar(): void {
+        console.log(`${this.nome} hehe hehe hehehehehehe`)
+    }
+}
+
+const doguinho = new Cachorro("Dogunho");
+const GatoDeBotas = new Gato2("Gato de Botas");
+const PicaPau = new Passaro("Pica Pau")
+doguinho.falar();
+GatoDeBotas.falar();
+PicaPau.falar();
+
+
+//Crie uma interface Instrumento com o método tocar().Implemente em classes (Guitarra, Bateria, Flauta) que tocam sons diferentes.
+interface Instrumento {
+    objeto: string;
+}
+
+class guitarra implements Instrumento {
+     constructor(public objeto: string) {}
+     tocar(): void {
+        console.log(`${this.objeto} dada domdod dada dom dom `)
+     }
+}
+
+class bateria implements Instrumento {
+    constructor(public objeto: string) {}
+    tocar(): void {
+        console.log(`${this.objeto} papa pumpum papadom dom bommmm`)
+    }
+}
+
+class flauta implements Instrumento {
+    constructor(public objeto: string) {}
+    tocar(): void {
+        console.log(`${this.objeto} fla flu fla flu`)
+    }
+}
+
+const cantor1 = new guitarra("Eddie Vanhelen");
+const cantor2 = new bateria("Baterista");
+const cantor3 = new flauta(`Flautista`);
+cantor1.tocar();
+cantor2.tocar();
+cantor3.tocar();
+
+// Simule sobrecarga criando uma classe Mensagem com o método enviar(), que pode receber string ou número (id de usuário).
+class Mensagem {
+    escrever(msg: string, assunto: string): string;
+    escrever(msg: number, assunto: number): number;
+    
+    escrever(a: any, b: any): any {
+        return a + b;
+    }
+
+    constructor() {}
+
+ }
+ const email = new Mensagem();
+console.log (email.escrever(1, 2));
+console.log( email.escrever("Eai", "Prof"));
+
+ 
